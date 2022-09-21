@@ -15,15 +15,6 @@ renderer.render( scene, camera )
 
 camera.position.z = 5
 
-// Tiempo de animacion
-function animate() {
- requestAnimationFrame( animate )
- cube.rotation.x += 0.04;
- cube.rotation.y += 0.04;
- renderer.render( scene, camera )
-}
-animate()
-
 // Luz
 var ambientLight = new THREE.AmbientLight ( 0xffffff, 0.5)
 scene.add( ambientLight )
@@ -42,6 +33,7 @@ var material = new THREE.MeshBasicMaterial( {
 var wireframeCube = new THREE.Mesh ( geometry, material )
 scene.add( wireframeCube )
 
+// Tiempo de animacion
 function animate() {
  requestAnimationFrame( animate )
  cube.rotation.x += 0.04;
